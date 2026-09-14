@@ -172,7 +172,7 @@
       <li>Ageless</li>
       <li>ArchiteMetabolism</li>
       <li>DiseaseFree</li>
-      <li>Cannibal</li>
+      <li MayRequire="RedMattis.BigSmall.Core">Cannibal</li>
       <li>VRE_Hemosmosis</li>
       <li>Hemogenic</li>
       <li>BS_SpiderBody_Hemo</li>
