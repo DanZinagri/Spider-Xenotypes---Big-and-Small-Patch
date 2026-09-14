@@ -244,6 +244,47 @@
         </renderNodeProperties>
     </GeneDef>
     <GeneDef ParentName="GeneEarsBase">
+        <defName>DZ_ArachnidEars</defName>
+        <label>arachnid ears</label>
+        <description>Carriers of this gene have long, sharply pointed ears.</description>
+        <iconPath>UI/Icons/Genes/Gene_DZ_ArachnidEars</iconPath>
+        <displayOrderInCategory>75</displayOrderInCategory>
+        <renderNodeProperties Inherit="False">
+            <li>
+                <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+                <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+                <texPath>Things/Pawn/Humanlike/HeadAttachments/DZ_ArachnidEars/DZ_ArachnidEars</texPath>
+                <colorType>Skin</colorType>
+                <parentTagDef>Head</parentTagDef>
+                <useSkinShader>true</useSkinShader>
+                <useRottenColor>true</useRottenColor>
+                <rotDrawMode>Fresh, Rotting</rotDrawMode>
+                <drawData>
+                    <defaultData>
+                        <layer>64</layer>
+                    </defaultData>
+                </drawData>
+            </li>
+        </renderNodeProperties>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>point</symbol></li>
+                <li><symbol>sharp</symbol></li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li><symbol>ear</symbol></li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+    <GeneDef ParentName="GeneHairColorBase">
+        <defName>DZ_TyrianHair</defName>
+        <label>tyrian hair</label>
+        <hairColorOverride>(63, 25, 102)</hairColorOverride>
+        <randomBrightnessFactor>0.05</randomBrightnessFactor>
+        <selectionWeight>0.05</selectionWeight>
+        <displayOrderInCategory>0</displayOrderInCategory>
+    </GeneDef>
+    <GeneDef ParentName="GeneEarsBase">
 		<defName>DZ_WolfEars</defName>
 		<label>Wolf Ears</label>
 		<description>Carriers of this gene will grow wolf-like ears.</description>

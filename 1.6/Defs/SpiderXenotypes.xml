@@ -44,10 +44,7 @@
     <inheritable>true</inheritable>
     <genes>
       <li>ArchiteMetabolism</li>
-      <li>BS_EndlessGrowth</li>
-      <li>BS_SlowAging</li>
       <li>Body_FemaleOnly</li>
-      <li>BS_EverFertile</li>
       <li>SEX_MoreMilk</li>
       <li>SEX_AlwaysLactating</li>
       <li>Fertile</li>
@@ -115,7 +112,7 @@
       <li>FireWeakness</li>
       <li>Immunity_Weak</li>
       <li>MoveSpeed_VeryQuick</li>
-      <li>VeryNakedSpeed</li>
+      <li>NakedSpeed</li>
       <li>Aggression_HyperAggressive</li>
       <li>KillThirst</li>
       <li>Mood_Pessimist</li>
@@ -149,10 +146,10 @@
       <li>FireWeakness</li>
       <li>FireTerror</li>
       <li>MeleeDamage_Weak</li>
-      <li>BS_VeryDelicate</li>
+      <li>Delicate</li>
       <li>Beauty_Beautiful</li>
-      <li>BS_Ears_PointedHD</li>
-      <li>BS_DeepVioletHair</li>
+      <li>DZ_ArachnidEars</li>
+      <li>DZ_TyrianHair</li>
       <li>AptitudeStrong_Shooting</li>
       <li>AptitudePoor_Melee</li>
       <li>AptitudeRemarkable_Intellectual</li>
@@ -175,16 +172,13 @@
       <li>Ageless</li>
       <li>ArchiteMetabolism</li>
       <li>DiseaseFree</li>
-      <li>BS_Diet_Universal</li>
       <li>Cannibal</li>
-      <li>BS_TrulyAgeless</li>
       <li>VRE_Hemosmosis</li>
       <li>Hemogenic</li>
       <li>BS_SpiderBody_Hemo</li>
       <li>DZ_HemogenRegen</li>
-      <li>VU_NearSterile</li>
       <li>Body_Standard</li>
-      <li>BS_BloodHair</li>
+      <li>Hair_BrightRed</li>
       <li MayRequire="sarg.alphagenes">AG_InsectBlood</li>
       <li MayRequire="vanillaracesexpanded.insector">VRE_InsectFlesh</li>
       <li>DZ_HemogenExpel</li>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Genes that only exist in Big and Small - Genes & More. The base xenotypes ship
+         with vanilla stand-ins (or nothing); this restores the originals when G&M is loaded. -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Big and Small - Genes &amp; More</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <!-- Hemox: swap vanilla red hair for blood hair, add the G&M-only extras -->
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/XenotypeDef[defName="Hemox"]/genes/li[text()="Hair_BrightRed"]</xpath>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/XenotypeDef[defName="Hemox"]/genes</xpath>
+                    <value>
+                        <li>BS_BloodHair</li>
+                        <li>BS_TrulyAgeless</li>
+                        <li>VU_NearSterile</li>
+                    </value>
+                </li>
+                <!-- Nurserachne: growth / aging / fertility package -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/XenotypeDef[defName="Nurserachne"]/genes</xpath>
+                    <value>
+                        <li>BS_EndlessGrowth</li>
+                        <li>BS_SlowAging</li>
+                        <li>BS_EverFertile</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>
