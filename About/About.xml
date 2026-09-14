@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Spider Xenotypes - Big and Small Patch</name>
+	<author>DanZinagri</author>
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+	<packageId>DanZinagri.SpiderXenotypesBS</packageId>
+	<description>
+	I like spider xenotypes, but I'm not a huge fan of the look from big and small; and then i realized, we have all these bug parts laying around.
+	</description>
+	<modDependencies>
+	<li>
+		<packageId>vera.bug</packageId>
+		<displayName>Oops all BUGPARTS 2</displayName>
+		<steamWorkshopUrl>steam://url/CommunityFilePage/2896673577</steamWorkshopUrl>
+	</li>
+	<li>
+		<packageId>RedMattis.BetterPrerequisites</packageId>
+		<displayName>Big and Small - Framework</displayName>
+		<steamWorkshopUrl>steam://url/CommunityFilePage/2925432336</steamWorkshopUrl>
+	</li>
+	<li>
+		<packageId>RedMattis.BigSmall.Core</packageId>
+		<displayName>Big and Small - Genes &amp; More</displayName>
+		<steamWorkshopUrl>steam://url/CommunityFilePage/2920751126</steamWorkshopUrl>
+	</li>
+	</modDependencies>
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.Biotech</li>
+		<li>redmattis.betterprerequisites</li>
+		<li>redmattis.bigsmall.core</li>
+		<li>euterpe.milkytitfuck</li>
+		<li>vanillaracesexpanded.sanguophage</li>
+		<li>vera.bug</li>
+		<li>redmattis.morexenos</li>
+		<li>dankpyon.medieval.overhaul</li>
+		<li>sarg.alphaanimals</li>
+	</loadAfter>
+</ModMetaData>

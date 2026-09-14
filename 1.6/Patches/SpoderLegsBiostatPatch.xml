@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Big and Small - Genes &amp; More</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>Defs/GeneDef[@Name="BS_SpoderLegs"]/biostatMet</xpath>
+            <value>
+                <biostatMet>-1</biostatMet>
+            </value>
+        </match>
+    </Operation>
+</Patch>

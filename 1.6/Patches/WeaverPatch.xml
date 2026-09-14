@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Oops all BUGPARTS 2</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Big and Small - More Xenotypes</li>
+            </mods>
+
+            <match Class="PatchOperationSequence">
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/XenotypeDef[defName="BS_Weaver"]/genes</xpath>
+                        <value>
+                            <li MayRequire="sarg.alphaanimals">DZ_StunningWeb</li>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/GeneDef[defName="BS_SpiderBody_Synthread"]</xpath>
+                        <value>
+                            <renderNodeProperties Inherit="False">
+                                <li>
+                                    <parentTagDef>Body</parentTagDef>
+                                    <texPath>Things/Pawn/Humanlike/BodyAttachments/SpiderAbdomen/Arachnidleg</texPath>
+                                    <drawSize>(1.25,1.25)</drawSize>
+                                    <colorType>Hair</colorType>
+                                    <drawData>
+                                        <dataNorth>
+                                            <offset>(0, 1.0, 0)</offset>
+                                        </dataNorth>
+                                        <dataSouth>
+                                            <offset>(0, 2.0, 0)</offset>
+                                        </dataSouth>
+                                        <dataEast>
+                                            <offset>(0, 0.19, 0)</offset>
+                                        </dataEast>
+                                    </drawData>
+                                </li>
+                            </renderNodeProperties>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationRemove">
+                        <xpath>Defs/GeneDef[defName="BS_SpiderBody_Synthread"]/modExtensions/li[@Class="BigAndSmall.Flagger"]</xpath>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/XenotypeDef[defName="BS_Weaver"]/genes</xpath>
+                        <value>
+                            <li>Moth_floof_HairClr</li>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+</Patch>

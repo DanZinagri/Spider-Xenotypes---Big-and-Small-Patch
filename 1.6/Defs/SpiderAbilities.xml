@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <AbilityDef MayRequire="sarg.alphaanimals">
+        <defName>DZ_StunningWeb</defName>
+        <label>stunning web</label>
+        <description>Throw a web of sticky silk that can stun its target, just like a feralisk.</description>
+        <iconPath>UI/Abilities/AA_Web</iconPath>
+        <cooldownTicksRange>2500</cooldownTicksRange>
+        <aiCanUse>true</aiCanUse>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <writeCombatLog>True</writeCombatLog>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>25</range>
+            <warmupTime>3</warmupTime>
+            <soundCast>AA_ThrowShort</soundCast>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityLaunchProjectile">
+                <projectileDef>AA_Web</projectileDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef MayRequire="sarg.alphaanimals">
+        <defName>DZ_FireWeb</defName>
+        <label>fire web</label>
+        <description>Throw a web of sticky, flammable silk that can stun its target and cause burns, just like a cinderlisk.</description>
+        <iconPath>UI/Abilities/AA_FireWeb</iconPath>
+        <cooldownTicksRange>2500</cooldownTicksRange>
+        <aiCanUse>true</aiCanUse>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <writeCombatLog>True</writeCombatLog>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>25</range>
+            <warmupTime>3</warmupTime>
+            <soundCast>AA_ThrowShort</soundCast>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityLaunchProjectile">
+                <projectileDef>AA_FireWeb</projectileDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef MayRequire="sarg.alphaanimals">
+        <defName>DZ_FrostWeb</defName>
+        <label>frost web</label>
+        <description>Throw a web of sticky, freezing silk that can stun its target and cause frostbite, just like a blizzarisk.</description>
+        <iconPath>UI/Abilities/AA_FrostWeb</iconPath>
+        <cooldownTicksRange>2500</cooldownTicksRange>
+        <aiCanUse>true</aiCanUse>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <writeCombatLog>True</writeCombatLog>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>25</range>
+            <warmupTime>3</warmupTime>
+            <soundCast>AA_ThrowShort</soundCast>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityLaunchProjectile">
+                <projectileDef>AA_FrostWeb</projectileDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef MayRequire="sarg.alphaanimals">
+        <defName>DZ_AcidicWeb</defName>
+        <label>acidic web</label>
+        <description>Throw a web of sticky, acidic silk that can stun its target and cause periodic acid burns, just like a junglelisk.</description>
+        <iconPath>UI/Abilities/AA_AcidicWeb</iconPath>
+        <cooldownTicksRange>2500</cooldownTicksRange>
+        <aiCanUse>true</aiCanUse>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+        <writeCombatLog>True</writeCombatLog>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <range>25</range>
+            <warmupTime>3</warmupTime>
+            <soundCast>AA_ThrowShort</soundCast>
+            <targetParams>
+                <canTargetPawns>true</canTargetPawns>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityLaunchProjectile">
+                <projectileDef>AA_AcidicWeb</projectileDef>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>DZ_HemogenExpel</defName>
+        <label>hemogen expel</label>
+        <description>Convert 20% of your hemogen reserves into a hemogen pack, which can be stored, carried, or given to others later.</description>
+        <iconPath>UI/Icons/Genes/Gene_Hemogenic</iconPath>
+        <cooldownTicksRange>100</cooldownTicksRange>
+        <aiCanUse>false</aiCanUse>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <targetRequired>false</targetRequired>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <warmupTime>1.0</warmupTime>
+            <range>0</range>
+            <drawAimPie>false</drawAimPie>
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+                <canTargetPawns>false</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+            </targetParams>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityHemogenCost">
+                <hemogenCost>0.2</hemogenCost> <!--help with rounding errors -->
+            </li>
+            <li Class="CompProperties_AbilitySpawn">
+                <thingDef>HemogenPack</thingDef>
+            </li>
+            <li Class="CompProperties_AbilityEffecterOnCaster">
+                <effecterDef>Damage_HitFlesh</effecterDef>
+                <scale>1.5</scale>
+            </li>
+        </comps>
+    </AbilityDef>
+</Defs>

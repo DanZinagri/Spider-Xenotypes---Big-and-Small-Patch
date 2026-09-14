@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Oops all BUGPARTS 2</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Big and Small - Genes &amp; More</li>
+            </mods>
+
+            <match Class="PatchOperationSequence">
+                <operations>
+                    <li Class="PatchOperationReplace">
+                        <xpath>Defs/GeneDef[defName="BS_SpiderBody"]/renderNodeProperties</xpath>
+                        <value>
+                            <renderNodeProperties Inherit="False">
+                                <li>
+                                    <parentTagDef>Body</parentTagDef>
+                                    <texPath>Things/Pawn/Humanlike/BodyAttachments/SpiderAbdomen/Arachnidleg</texPath>
+                                    <drawSize>(1.25,1.25)</drawSize>
+                                    <colorType>Skin</colorType>
+                                    <drawData>
+                                        <dataNorth>
+                                            <offset>(0, 1.0, 0)</offset>
+                                        </dataNorth>
+                                        <dataSouth>
+                                            <offset>(0, 2.0, 0)</offset>
+                                        </dataSouth>
+                                        <dataEast>
+                                            <offset>(0, 0.19, 0)</offset>
+                                        </dataEast>
+                                    </drawData>
+                                </li>
+                            </renderNodeProperties>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+</Patch>

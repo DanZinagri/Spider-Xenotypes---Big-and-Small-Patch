@@ -1,0 +1,380 @@
+<?xml version="1.0" ?>
+<Defs>
+    <!-- Local copies of Genes & More's BS_Spiderbase / BS_SpoderLegs so our abdomen genes
+         don't inherit from that mod. SpoderLegsBiostatPatch still patches the BS_ originals
+         for Weaver / Devilspider. biostatMet is -1 here to match that patched value. -->
+    <GeneDef Name="DZ_Spiderbase" ParentName="BS_BodySwitchNonExclusive" Abstract="True">
+        <displayCategory>BS_BodySwap</displayCategory>
+        <biostatCpx>0</biostatCpx>
+        <biostatMet>0</biostatMet>
+        <randomChosen>false</randomChosen>
+        <displayOrderInCategory>50</displayOrderInCategory>
+        <iconColor>(0.75, 0.75, 0.75)</iconColor>
+        <exclusionTags>
+            <li>Tail</li>
+            <li>taur</li>
+            <li>spiderlegs</li>
+        </exclusionTags>
+        <renderNodeProperties Inherit="False">
+            <li>
+                <parentTagDef>Body</parentTagDef>
+                <drawSize>(1.25,1.25)</drawSize>
+                <drawData>
+                    <dataNorth>
+                        <offset>(0, 0.0150617733, -0.47)</offset>
+                    </dataNorth>
+                    <dataSouth>
+                        <offset>(0, 0.0150617733, 0)</offset>
+                    </dataSouth>
+                    <dataEast>
+                        <offset>(0, 0.0150617733, 0)</offset>
+                    </dataEast>
+                </drawData>
+            </li>
+        </renderNodeProperties>
+    </GeneDef>
+
+    <GeneDef Name="DZ_SpoderLegs" ParentName="DZ_Spiderbase" Abstract="True">
+        <description>Carriers of this gene have their lower half replaced with the body of a spider. Has science gone too far?</description>
+        <customEffectDescriptions>
+            <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">Reduces the movement speed penalty when traversing difficult terrain</li>
+        </customEffectDescriptions>
+        <iconPath>GeneIcons/BS_Spooder</iconPath>
+        <displayOrderInCategory>777</displayOrderInCategory>
+        <biostatCpx>1</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <selectionWeight>1</selectionWeight>
+        <missingGeneRomanceChanceFactor>0.75</missingGeneRomanceChanceFactor>
+    </GeneDef>
+
+    <GeneDef ParentName="BS_BodySwitchNonExclusive">
+        <defName>BS_SpiderBody_Hair</defName>
+        <label>spider-like body</label>
+        <description>Carriers of this gene have 8 legs, like a spider.</description>
+        <biostatCpx>0</biostatCpx>
+        <biostatMet>0</biostatMet>
+        <randomChosen>false</randomChosen>
+        <iconPath>BS_Icons/Spider</iconPath>
+        <exclusionTags>
+            <li>Tail</li>
+            <li>taur</li>
+            <li>spiderlegs</li>
+        </exclusionTags>
+        <renderNodeProperties>
+            <li>
+                <parentTagDef>Body</parentTagDef>
+                <texPath>Things/Pawn/Humanlike/BodyAttachments/SpiderAbdomen/Arachnidleg</texPath>
+                <drawSize>(1.25,1.25)</drawSize>
+                <colorType>Hair</colorType>
+                <drawData>
+                    <dataNorth>
+                        <offset>(0, 1.0, 0)</offset>
+                    </dataNorth>
+                    <dataSouth>
+                        <offset>(0, 2.0, 0)</offset>
+                    </dataSouth>
+                    <dataEast>
+                        <offset>(0, 0.19, 0)</offset>
+                    </dataEast>
+                </drawData>
+            </li>
+        </renderNodeProperties>
+        <modExtensions>
+            <li Class="BigAndSmall.PawnExtension">
+                <thingDefSwap>BS_SpiderPersonRace</thingDefSwap>
+            </li>
+            <!-- <li Class="BigAndSmall.Flagger"><flags><ShowBaseAbdomen/></flags></li> -->
+        </modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="DZ_SpoderLegs">
+        <defName>BS_SpiderBody_Cloth</defName>
+        <label>Spider Abdomen (Cloth)</label>
+        <description>Carriers of this gene have their lower half replaced with the body of a spider. Has science gone too far?\n\nProduces 20 Cloth every 2 days, modified by body-size.\n\nSpider body has hair-colour</description>
+        <geneClass>BigAndSmall.ProductionGene</geneClass>
+        <modExtensions>
+            <li Class="BigAndSmall.PawnExtension">
+                <thingDefSwap>BS_SpiderPersonRace</thingDefSwap>
+            </li>
+
+            <li Class="BigAndSmall.ProductionGeneSettings">
+                <product>Cloth</product>
+                <frequencyInDays>2</frequencyInDays>
+                <baseAmount>20</baseAmount>
+                <progressName>Producing Cloth</progressName>
+                <saveKey>BS_Clothroduction</saveKey>
+            </li>
+        </modExtensions>
+        <renderNodeProperties Inherit="False">
+            <li>
+                <parentTagDef>Body</parentTagDef>
+                <texPath>Things/Pawn/Humanlike/BodyAttachments/SpiderAbdomen/Arachnidleg</texPath>
+                <drawSize>(1.25,1.25)</drawSize>
+                <colorType>Hair</colorType>
+                <drawData>
+                    <dataNorth>
+                        <offset>(0, 1.0, 0)</offset>
+                    </dataNorth>
+                    <dataSouth>
+                        <offset>(0, 2.0, 0)</offset>
+                    </dataSouth>
+                    <dataEast>
+                        <offset>(0, 0.19, 0)</offset>
+                    </dataEast>
+                </drawData>
+            </li>
+        </renderNodeProperties>
+    </GeneDef>
+    <GeneDef ParentName="DZ_SpoderLegs" MayRequire="dankpyon.medieval.overhaul">
+        <defName>BS_SpiderBody_Silk</defName>
+        <label>Spider Abdomen (Silk)</label>
+        <description>Carriers of this gene have their lower half replaced with the body of a spider. Has science gone too far?\n\nProduces 30 silk every 4 days, modified by body-size.\n\nSpider body has hair-colour</description>
+        <geneClass>BigAndSmall.ProductionGene</geneClass>
+        <modExtensions>
+            <li Class="BigAndSmall.PawnExtension">
+                <thingDefSwap>BS_SpiderPersonRace</thingDefSwap>
+            </li>
+
+            <li Class="BigAndSmall.ProductionGeneSettings">
+                <product>DankPyon_Silk</product>
+                <frequencyInDays>4</frequencyInDays>
+                <baseAmount>30</baseAmount>
+                <progressName>Producing Silk</progressName>
+                <saveKey>BS_DankPyon_Silkroduction</saveKey>
+            </li>
+        </modExtensions>
+        <renderNodeProperties Inherit="False">
+            <li>
+                <parentTagDef>Body</parentTagDef>
+                <texPath>Things/Pawn/Humanlike/BodyAttachments/SpiderAbdomen/Arachnidleg</texPath>
+                <drawSize>(1.25,1.25)</drawSize>
+                <colorType>Hair</colorType>
+                <drawData>
+                    <dataNorth>
+                        <offset>(0, 1.0, 0)</offset>
+                    </dataNorth>
+                    <dataSouth>
+                        <offset>(0, 2.0, 0)</offset>
+                    </dataSouth>
+                    <dataEast>
+                        <offset>(0, 0.19, 0)</offset>
+                    </dataEast>
+                </drawData>
+            </li>
+        </renderNodeProperties>
+    </GeneDef>
+    <GeneDef ParentName="DZ_SpoderLegs" MayRequire="oskarpotocki.vfe.classical">
+        <defName>BS_SpiderBody_Tyrian</defName>
+        <label>Spider Abdomen (Tyrian)</label>
+        <description>Carriers of this gene have their lower half replaced with the body of a spider. Has science gone too far?\n\nProduces 30 Tyrian every 4 days, modified by body-size.\n\nSpider body has hair-colour</description>
+        <geneClass>BigAndSmall.ProductionGene</geneClass>
+        <modExtensions>
+            <li Class="BigAndSmall.PawnExtension">
+                <thingDefSwap>BS_SpiderPersonRace</thingDefSwap>
+            </li>
+
+            <li Class="BigAndSmall.ProductionGeneSettings">
+                <product>VFEC_Tyrian</product>
+                <frequencyInDays>4</frequencyInDays>
+                <baseAmount>30</baseAmount>
+                <progressName>Producing Tyrian</progressName>
+                <saveKey>BS_VFEC_Tyrianroduction</saveKey>
+            </li>
+        </modExtensions>
+        <renderNodeProperties Inherit="False">
+            <li>
+                <parentTagDef>Body</parentTagDef>
+                <texPath>Things/Pawn/Humanlike/BodyAttachments/SpiderAbdomen/Arachnidleg</texPath>
+                <drawSize>(1.25,1.25)</drawSize>
+                <colorType>Hair</colorType>
+                <drawData>
+                    <dataNorth>
+                        <offset>(0, 1.0, 0)</offset>
+                    </dataNorth>
+                    <dataSouth>
+                        <offset>(0, 2.0, 0)</offset>
+                    </dataSouth>
+                    <dataEast>
+                        <offset>(0, 0.19, 0)</offset>
+                    </dataEast>
+                </drawData>
+            </li>
+        </renderNodeProperties>
+    </GeneDef>
+    <GeneDef ParentName="DZ_SpoderLegs">
+        <defName>BS_SpiderBody_Hemo</defName>
+        <label>Spider Abdomen (Hemogen)</label>
+        <description>Carriers of this gene have their lower half replaced with the body of a spider.\n\nProduces 2 Hemogen every day, modified by body-size.\n\nSpider body has hair-colour. </description>
+        <prerequisite>Hemogenic</prerequisite>
+        <displayCategory>Hemogen</displayCategory>
+        <biostatCpx>1</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <geneClass>BigAndSmall.ProductionGene</geneClass>
+        <modExtensions>
+            <li Class="BigAndSmall.PawnExtension">
+                <thingDefSwap>BS_SpiderPersonRace</thingDefSwap>
+            </li>
+
+            <li Class="BigAndSmall.ProductionGeneSettings">
+                <product>HemogenPack</product>
+                <frequencyInDays>1</frequencyInDays>
+                <baseAmount>2</baseAmount>
+                <progressName>Producing Hemogen</progressName>
+                <saveKey>BS_HemogenPackroduction</saveKey>
+            </li>
+        </modExtensions>
+        <renderNodeProperties Inherit="False">
+            <li>
+                <parentTagDef>Body</parentTagDef>
+                <texPath>Things/Pawn/Humanlike/BodyAttachments/SpiderAbdomen/Arachnidleg</texPath>
+                <drawSize>(1.25,1.25)</drawSize>
+                <colorType>Hair</colorType>
+                <drawData>
+                    <dataNorth>
+                        <offset>(0, 1.0, 0)</offset>
+                    </dataNorth>
+                    <dataSouth>
+                        <offset>(0, 2.0, 0)</offset>
+                    </dataSouth>
+                    <dataEast>
+                        <offset>(0, 0.19, 0)</offset>
+                    </dataEast>
+                </drawData>
+            </li>
+        </renderNodeProperties>
+    </GeneDef>
+    <GeneDef ParentName="GeneEarsBase">
+		<defName>DZ_WolfEars</defName>
+		<label>Wolf Ears</label>
+		<description>Carriers of this gene will grow wolf-like ears.</description>
+		<iconPath>UI/Icons/Genes/Gene_DZ_WolfEars_east</iconPath>
+		<renderNodeProperties Inherit="False">
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/DZ_WolfEars/DZ_WolfEars</texPath>
+				<useSkinShader>false</useSkinShader>
+				<colorType>Hair</colorType>
+				<drawData>
+					<defaultData>
+						<layer>70</layer>
+					</defaultData>
+				</drawData>
+				<parentTagDef>Head</parentTagDef>
+			</li>
+		</renderNodeProperties>
+		<biostatCpx>1</biostatCpx>
+	</GeneDef>
+    <GeneDef ParentName="GeneNoseBase">
+		<defName>DZ_AnimalNose</defName>
+		<label>canine nose</label>
+		<description>Carriers of this gene have wolf-like noses.</description>
+		<iconPath>UI/Icons/Genes/Gene_DZ_AnimalNose</iconPath>
+		<biostatCpx>1</biostatCpx>
+		<missingGeneRomanceChanceFactor>0.2</missingGeneRomanceChanceFactor>
+		<displayCategory>Miscellaneous</displayCategory>
+		<displayOrderInCategory>410.1</displayOrderInCategory>
+	</GeneDef>
+    <FacialAnimation.HeadTypeDef  MayRequire="nals.facialanimation">
+        <defName>DZ_AnimalNose</defName>
+        <texPath>DZ_AnimalNose</texPath>
+        <probability>1</probability>
+        <shader>Map/CutoutSkin</shader>
+        <shaderColorOverride>Map/CutoutSkinOverride</shaderColorOverride>
+        <targetGeneDefs>
+            <li>DZ_AnimalNose</li>
+        </targetGeneDefs>
+    </FacialAnimation.HeadTypeDef>
+
+    <GeneDef MayRequire="sarg.alphaanimals">
+        <defName>DZ_StunningWeb</defName>
+        <label>stunning web</label>
+        <description>Carriers of this gene have silk glands capable of launching a huge, sticky web at foes, just like a feralisk. The web stuns anyone it touches, allowing the carrier to close in for the kill.</description>
+        <iconPath>UI/Abilities/AA_Web</iconPath>
+        <displayCategory>Ability</displayCategory>
+        <biostatMet>-2</biostatMet>
+        <abilities>
+            <li>DZ_StunningWeb</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>DZ_StunningWeb</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef MayRequire="sarg.alphaanimals">
+        <defName>DZ_FireWeb</defName>
+        <label>fire web</label>
+        <description>Carriers of this gene have silk glands capable of launching a flammable web at foes, just like a cinderlisk. The web stuns anyone it touches and can set them alight.</description>
+        <iconPath>UI/Abilities/AA_FireWeb</iconPath>
+        <displayCategory>Ability</displayCategory>
+        <biostatMet>-2</biostatMet>
+        <abilities>
+            <li>DZ_FireWeb</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>DZ_FireWeb</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef MayRequire="sarg.alphaanimals">
+        <defName>DZ_FrostWeb</defName>
+        <label>frost web</label>
+        <description>Carriers of this gene have silk glands capable of launching a freezing web at foes, just like a blizzarisk. The web stuns anyone it touches and can cause frostbite.</description>
+        <iconPath>UI/Abilities/AA_FrostWeb</iconPath>
+        <displayCategory>Ability</displayCategory>
+        <biostatMet>-2</biostatMet>
+        <abilities>
+            <li>DZ_FrostWeb</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>DZ_FrostWeb</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef MayRequire="sarg.alphaanimals">
+        <defName>DZ_AcidicWeb</defName>
+        <label>acidic web</label>
+        <description>Carriers of this gene have silk glands capable of launching an acidic web at foes, just like a junglelisk. The web stuns anyone it touches and can cause periodic acid burns.</description>
+        <iconPath>UI/Abilities/AA_AcidicWeb</iconPath>
+        <displayCategory>Ability</displayCategory>
+        <biostatMet>-2</biostatMet>
+        <abilities>
+            <li>DZ_AcidicWeb</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>DZ_AcidicWeb</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef>
+        <defName>DZ_HemogenExpel</defName>
+        <label>Hemogen Expel</label>
+        <description>Convert 20% of your hemogen reserves into a hemogen pack, which can be stored, carried, or given to others later.</description>
+        <iconPath>UI/Icons/Genes/Gene_Hemogenic</iconPath>
+        <displayCategory>Ability</displayCategory>
+        <biostatMet>0</biostatMet>
+        <abilities>
+            <li>DZ_HemogenExpel</li>
+        </abilities>
+        <descriptionHyperlinks>
+            <AbilityDef>DZ_HemogenExpel</AbilityDef>
+        </descriptionHyperlinks>
+    </GeneDef>
+
+    <GeneDef>
+        <defName>DZ_HemogenRegen</defName>
+        <label>hemogen regeneration</label>
+        <description>Carriers of this gene have heightened cellular activity passively regenerating 2 hemogen per day on top of normal hemogenic entropy.</description>
+        <geneClass>Gene_HemogenDrain</geneClass>
+        <prerequisite>Hemogenic</prerequisite>
+        <resourceLabel>hemogen</resourceLabel>
+        <resourceLossPerDay>-0.02</resourceLossPerDay>
+        <displayCategory>Hemogen</displayCategory>
+        <iconPath>UI/Icons/Genes/Gene_Hemogenic</iconPath>
+        <biostatCpx>1</biostatCpx>
+        <biostatMet>-2</biostatMet>
+        <exclusionTags>
+            <li>HemogenFeeding</li>
+        </exclusionTags>
+    </GeneDef>
+</Defs>

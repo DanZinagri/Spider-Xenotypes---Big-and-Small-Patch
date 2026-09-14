@@ -1,0 +1,193 @@
+<?xml version="1.0" ?>
+<Defs>
+  <XenotypeDef>
+    <defName>Arakron</defName>
+    <label>Arakron</label>
+    <description>A Brutish Arachne Xenotype that overhwelmes its foes with both strength and poison.</description>
+    <descriptionShort>Brutish Arachne Xenotype</descriptionShort>
+    <iconPath>Xenotypes/BS_Spider</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>ArchiteMetabolism</li>
+      <li>BS_LargeFrame</li>
+      <li>LoS_VenomTalons</li>
+      <li>Body_Standard</li>
+      <li MayRequire="sarg.alphagenes">AG_InsectBlood</li>
+      <li MayRequire="vanillaracesexpanded.insector">VRE_InsectFlesh</li>
+      <li>StrongStomach</li>
+      <li>RobustDigestion</li>
+      <li>WoundHealing_Fast</li>
+      <li>BS_NaturalArmor_Great</li>
+      <li>PsychicAbility_Dull</li>
+      <li>MoveSpeed_Slow</li>
+      <li>ToxResist_Partial</li>
+      <li>FireWeakness</li>
+      <li>BS_Bloodlust</li>
+      <li>Aggression_HyperAggressive</li>
+      <li>MeleeDamage_Strong</li>
+      <li>KillThirst</li>
+      <li MayRequire="sarg.alphagenes">AG_VenomFangs</li>
+      <li>DarkVision</li>
+      <li>Instability_Major</li>
+      <li>AptitudeRemarkable_Melee</li>
+      <li>AptitudePoor_Plants</li>
+      <li>AptitudeStrong_Crafting</li>
+      <li>BS_SpiderBody</li>
+    </genes>
+  </XenotypeDef>
+  <XenotypeDef MayRequire="euterpe.milkytitfuck">
+    <defName>Nurserachne</defName>
+    <label>Nurserachne</label>
+    <description>A strange genetic experiment. Nuserachne are made to be a versitile wet nurse, as well as capable of helping carry young for others. This makes them a genetic dead-end unable to carry on their own genes without more cloning of their xenotype.</description>
+    <descriptionShort>Easter Egg Xenotype</descriptionShort>
+    <iconPath>Xenotypes/BS_Spider</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>ArchiteMetabolism</li>
+      <li>BS_EndlessGrowth</li>
+      <li>BS_SlowAging</li>
+      <li>Body_FemaleOnly</li>
+      <li>BS_EverFertile</li>
+      <li>SEX_MoreMilk</li>
+      <li>SEX_AlwaysLactating</li>
+      <li>Fertile</li>
+      <li>Body_Standard</li>
+      <li MayRequire="redmattis.bettergeneinheritance">BGI_RecessiveGenes</li>
+      <li>Beauty_Beautiful</li>
+      <li>AptitudeTerrible_Shooting</li>
+      <li>AptitudeTerrible_Mining</li>
+      <li>AptitudePoor_Plants</li>
+      <li>AptitudeTerrible_Artistic</li>
+      <li>AptitudeStrong_Medicine</li>
+      <li>AptitudeStrong_Social</li>
+      <li>BS_SpiderBody_Cloth</li>
+      <li MayRequire="sarg.alphagenes">AG_InsectBlood</li>
+      <li MayRequire="vanillaracesexpanded.insector">VRE_InsectFlesh</li>
+      <li MayRequire="sarg.alphaanimals">DZ_StunningWeb</li>
+    </genes>
+  </XenotypeDef>
+  <XenotypeDef MayRequire="dankpyon.medieval.overhaul">
+    <defName>SilkWeaver</defName>
+    <label>Silk Weaver</label>
+    <description>A human spider hybrid that excels at crafting and produces their own high quality silk.</description>
+    <descriptionShort>Silk producing spider</descriptionShort>
+    <iconPath>Xenotypes/BS_Spider</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>TotalHealing</li>
+      <li>BS_NaturalArmor</li>
+      <li>Moth_floof_HairClr</li>
+      <li>VU_Pounce</li>
+      <li>StrongStomach</li>
+      <li>RobustDigestion</li>
+      <li>Immunity_Weak</li>
+      <li>WoundHealing_Fast</li>
+      <li>Mood_Depressive</li>
+      <li>MinTemp_SmallIncrease</li>
+      <li>ToxResist_Partial</li>
+      <li>Delicate</li>
+      <li>DarkVision</li>
+      <li>Instability_Major</li>
+      <li>ElongatedFingers</li>
+      <li>AptitudePoor_Plants</li>
+      <li>AptitudeTerrible_Animals</li>
+      <li>AptitudeRemarkable_Crafting</li>
+      <li>BS_SpiderBody_Silk</li>
+      <li>Body_Standard</li>
+      <li MayRequire="sarg.alphagenes">AG_InsectBlood</li>
+      <li MayRequire="vanillaracesexpanded.insector">VRE_InsectFlesh</li>
+      <li MayRequire="sarg.alphaanimals">DZ_StunningWeb</li>
+    </genes>
+  </XenotypeDef>
+  <XenotypeDef>
+    <defName>WolfSpider</defName>
+    <label>Wolf Spider</label>
+    <description>A extra furry race of spider people, primed for their quick speed and hunting instincts.</description>
+    <descriptionShort>Wolf + Spider</descriptionShort>
+    <iconPath>Xenotypes/BS_Spider</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>BS_LargeFrame</li>
+      <li>Moth_floof_HairClr</li>
+      <li>VU_Pounce</li>
+      <li MayRequire="vanillaracesexpanded.lycanthrope">VRE_WarHowl</li>
+      <li>MeleeDamage_Strong</li>
+      <li>FireWeakness</li>
+      <li>Immunity_Weak</li>
+      <li>MoveSpeed_VeryQuick</li>
+      <li>VeryNakedSpeed</li>
+      <li>Aggression_HyperAggressive</li>
+      <li>KillThirst</li>
+      <li>Mood_Pessimist</li>
+      <li>MinTemp_SmallDecrease</li>
+      <li>MaxTemp_SmallDecrease</li>
+      <li>StrongStomach</li>
+      <li>RobustDigestion</li>
+      <li>BS_Diet_Carnivore</li>
+      <li>BS_EverFertile</li>
+      <li>Libido_High</li>
+      <li>BS_SpiderBody_Hair</li>
+      <li>DZ_WolfEars</li>
+      <li>Body_Standard</li>
+      <li MayRequire="vanillaracesexpanded.insector">VRE_InsectFlesh</li>
+      <li MayRequire="sarg.alphagenes">AG_InsectBlood</li>
+      <li>BS_FurryBody</li>
+      <li>DZ_AnimalNose</li>
+      <li>AptitudeRemarkable_Melee</li>
+      <li>AptitudePoor_Intellectual</li>
+    </genes>
+  </XenotypeDef>
+  <XenotypeDef MayRequire="oskarpotocki.vfe.classical">
+    <defName>TyrianWeaver</defName>
+    <label>Tyrian Weaver</label>
+    <description>A human spider hybrid that excels at crafting and produces their own high quality silk.</description>
+    <descriptionShort>Silk producing spider</descriptionShort>
+    <iconPath>Xenotypes/BS_Spider</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>BS_NaturalArmor</li>
+      <li>FireWeakness</li>
+      <li>FireTerror</li>
+      <li>MeleeDamage_Weak</li>
+      <li>BS_VeryDelicate</li>
+      <li>Beauty_Beautiful</li>
+      <li>BS_Ears_PointedHD</li>
+      <li>BS_DeepVioletHair</li>
+      <li>AptitudeStrong_Shooting</li>
+      <li>AptitudePoor_Melee</li>
+      <li>AptitudeRemarkable_Intellectual</li>
+      <li>BS_SpiderBody_Tyrian</li>
+      <li>Moth_floof_HairClr</li>
+      <li>Body_Standard</li>
+      <li MayRequire="sarg.alphagenes">AG_InsectBlood</li>
+      <li MayRequire="vanillaracesexpanded.insector">VRE_InsectFlesh</li>
+      <li MayRequire="sarg.alphaanimals">DZ_StunningWeb</li>
+    </genes>
+  </XenotypeDef>
+  <XenotypeDef MayRequire="vanillaracesexpanded.sanguophage">
+    <defName>Hemox</defName>
+    <label>Hemox</label>
+    <description>A strange creature, created by Sanguophages to become a living hemogen transport, beyond that of a normal creature. (WIP)</description>
+    <descriptionShort>Silk producing spider</descriptionShort>
+    <iconPath>Xenotypes/BS_Spider</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>Ageless</li>
+      <li>ArchiteMetabolism</li>
+      <li>DiseaseFree</li>
+      <li>BS_Diet_Universal</li>
+      <li>Cannibal</li>
+      <li>BS_TrulyAgeless</li>
+      <li>VRE_Hemosmosis</li>
+      <li>Hemogenic</li>
+      <li>BS_SpiderBody_Hemo</li>
+      <li>DZ_HemogenRegen</li>
+      <li>VU_NearSterile</li>
+      <li>Body_Standard</li>
+      <li>BS_BloodHair</li>
+      <li MayRequire="sarg.alphagenes">AG_InsectBlood</li>
+      <li MayRequire="vanillaracesexpanded.insector">VRE_InsectFlesh</li>
+      <li>DZ_HemogenExpel</li>
+    </genes>
+  </XenotypeDef>
+</Defs>
