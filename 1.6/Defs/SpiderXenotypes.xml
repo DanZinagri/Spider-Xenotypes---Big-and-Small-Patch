@@ -5,7 +5,7 @@
     <label>Arakron</label>
     <description>A Brutish Arachne Xenotype that overhwelmes its foes with both strength and poison.</description>
     <descriptionShort>Brutish Arachne Xenotype</descriptionShort>
-    <iconPath>UI/Icons/Xenotypes/BP_Arachna</iconPath>
+    <iconPath>UI/Icons/Xenotypes/SpiderIcon</iconPath>
     <inheritable>true</inheritable>
     <genes>
       <li>ArchiteMetabolism</li>
@@ -38,7 +38,7 @@
     <label>Nurserachne</label>
     <description>A strange genetic experiment. Nuserachne are made to be a versitile wet nurse, as well as capable of helping carry young for others. This makes them a genetic dead-end unable to carry on their own genes without more cloning of their xenotype.</description>
     <descriptionShort>Easter Egg Xenotype</descriptionShort>
-    <iconPath>UI/Icons/Xenotypes/BP_Arachna</iconPath>
+    <iconPath>UI/Icons/Xenotypes/SpiderIcon</iconPath>
     <inheritable>true</inheritable>
     <genes>
       <li>ArchiteMetabolism</li>
@@ -69,7 +69,7 @@
     <label>Silk Weaver</label>
     <description>A human spider hybrid that excels at crafting and produces their own high quality silk.</description>
     <descriptionShort>Silk producing spider</descriptionShort>
-    <iconPath>UI/Icons/Xenotypes/BP_Arachna</iconPath>
+    <iconPath>UI/Icons/Xenotypes/SpiderIcon</iconPath>
     <inheritable>true</inheritable>
     <genes>
       <li>TotalHealing</li>
@@ -102,7 +102,7 @@
     <label>Wolf Spider</label>
     <description>A extra furry race of spider people, primed for their quick speed and hunting instincts.</description>
     <descriptionShort>Wolf + Spider</descriptionShort>
-    <iconPath>UI/Icons/Xenotypes/BP_Arachna</iconPath>
+    <iconPath>UI/Icons/Xenotypes/SpiderIcon</iconPath>
     <inheritable>true</inheritable>
     <genes>
       <li>Moth_floof_HairClr</li>
@@ -139,7 +139,7 @@
     <label>Tyrian Weaver</label>
     <description>A human spider hybrid that excels at crafting and produces their own high quality silk.</description>
     <descriptionShort>Silk producing spider</descriptionShort>
-    <iconPath>UI/Icons/Xenotypes/BP_Arachna</iconPath>
+    <iconPath>UI/Icons/Xenotypes/SpiderIcon</iconPath>
     <inheritable>true</inheritable>
     <genes>
       <li MayRequire="RedMattis.BigSmall.Core">BS_NaturalArmor</li>
@@ -166,7 +166,7 @@
     <label>Hemox</label>
     <description>A strange creature, created by Sanguophages to become a living hemogen transport, beyond that of a normal creature. (WIP)</description>
     <descriptionShort>Silk producing spider</descriptionShort>
-    <iconPath>UI/Icons/Xenotypes/BP_Arachna</iconPath>
+    <iconPath>UI/Icons/Xenotypes/SpiderIcon</iconPath>
     <inheritable>true</inheritable>
     <genes>
       <li>Ageless</li>
