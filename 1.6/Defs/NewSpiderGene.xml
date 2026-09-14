@@ -143,7 +143,7 @@ Spider body has skin-colour.</description>
         <randomChosen>false</randomChosen>
         <iconPath>UI/Icons/Genes/Gene_SpiderAb</iconPath>
         <statOffsets>
-            <SM_BodySizeOffset>0.5</SM_BodySizeOffset>
+            <SM_BodySizeOffset>0.6</SM_BodySizeOffset>
         </statOffsets>
         <exclusionTags>
             <li>Tail</li>
