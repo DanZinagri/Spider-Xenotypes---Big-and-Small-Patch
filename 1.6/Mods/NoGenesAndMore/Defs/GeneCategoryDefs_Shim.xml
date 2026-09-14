@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Big and Small - Framework's BS_BodySwitchNonExclusive abstract points every body-swap
+       gene at this category, but the category itself only ships in Genes & More. This folder
+       loads only when Genes & More is absent, so the defName never collides. -->
+  <GeneCategoryDef>
+    <defName>BS_BodySwap</defName>
+    <label>Body Transformation</label>
+    <displayPriorityInXenotype>-388</displayPriorityInXenotype>
+  </GeneCategoryDef>
+</Defs>

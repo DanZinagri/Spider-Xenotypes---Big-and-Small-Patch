@@ -5,24 +5,22 @@
     <label>Arakron</label>
     <description>A Brutish Arachne Xenotype that overhwelmes its foes with both strength and poison.</description>
     <descriptionShort>Brutish Arachne Xenotype</descriptionShort>
-    <iconPath>Xenotypes/BS_Spider</iconPath>
+    <iconPath>UI/Icons/Xenotypes/BP_Arachna</iconPath>
     <inheritable>true</inheritable>
     <genes>
       <li>ArchiteMetabolism</li>
-      <li>BS_LargeFrame</li>
-      <li>LoS_VenomTalons</li>
+      <li MayRequire="RedMattis.BigSmall.Core">LoS_VenomTalons</li>
       <li>Body_Standard</li>
       <li MayRequire="sarg.alphagenes">AG_InsectBlood</li>
       <li MayRequire="vanillaracesexpanded.insector">VRE_InsectFlesh</li>
       <li>StrongStomach</li>
       <li>RobustDigestion</li>
       <li>WoundHealing_Fast</li>
-      <li>BS_NaturalArmor_Great</li>
+      <li MayRequire="RedMattis.BigSmall.Core">BS_NaturalArmor_Great</li>
       <li>PsychicAbility_Dull</li>
       <li>MoveSpeed_Slow</li>
       <li>ToxResist_Partial</li>
       <li>FireWeakness</li>
-      <li>BS_Bloodlust</li>
       <li>Aggression_HyperAggressive</li>
       <li>MeleeDamage_Strong</li>
       <li>KillThirst</li>
@@ -32,7 +30,7 @@
       <li>AptitudeRemarkable_Melee</li>
       <li>AptitudePoor_Plants</li>
       <li>AptitudeStrong_Crafting</li>
-      <li>BS_SpiderBody</li>
+      <li>DZ_SpiderBody_Arakron</li>
     </genes>
   </XenotypeDef>
   <XenotypeDef MayRequire="euterpe.milkytitfuck">
@@ -40,7 +38,7 @@
     <label>Nurserachne</label>
     <description>A strange genetic experiment. Nuserachne are made to be a versitile wet nurse, as well as capable of helping carry young for others. This makes them a genetic dead-end unable to carry on their own genes without more cloning of their xenotype.</description>
     <descriptionShort>Easter Egg Xenotype</descriptionShort>
-    <iconPath>Xenotypes/BS_Spider</iconPath>
+    <iconPath>UI/Icons/Xenotypes/BP_Arachna</iconPath>
     <inheritable>true</inheritable>
     <genes>
       <li>ArchiteMetabolism</li>
@@ -58,6 +56,9 @@
       <li>AptitudeStrong_Medicine</li>
       <li>AptitudeStrong_Social</li>
       <li>BS_SpiderBody_Cloth</li>
+      <li MayRequire="RedMattis.BigSmall.Core">BS_EndlessGrowth</li>
+      <li MayRequire="RedMattis.BigSmall.Core">BS_SlowAging</li>
+      <li MayRequire="RedMattis.BigSmall.Core">BS_EverFertile</li>
       <li MayRequire="sarg.alphagenes">AG_InsectBlood</li>
       <li MayRequire="vanillaracesexpanded.insector">VRE_InsectFlesh</li>
       <li MayRequire="sarg.alphaanimals">DZ_StunningWeb</li>
@@ -68,13 +69,13 @@
     <label>Silk Weaver</label>
     <description>A human spider hybrid that excels at crafting and produces their own high quality silk.</description>
     <descriptionShort>Silk producing spider</descriptionShort>
-    <iconPath>Xenotypes/BS_Spider</iconPath>
+    <iconPath>UI/Icons/Xenotypes/BP_Arachna</iconPath>
     <inheritable>true</inheritable>
     <genes>
       <li>TotalHealing</li>
-      <li>BS_NaturalArmor</li>
+      <li MayRequire="RedMattis.BigSmall.Core">BS_NaturalArmor</li>
       <li>Moth_floof_HairClr</li>
-      <li>VU_Pounce</li>
+      <li MayRequire="RedMattis.BigSmall.Core">VU_Pounce</li>
       <li>StrongStomach</li>
       <li>RobustDigestion</li>
       <li>Immunity_Weak</li>
@@ -101,12 +102,11 @@
     <label>Wolf Spider</label>
     <description>A extra furry race of spider people, primed for their quick speed and hunting instincts.</description>
     <descriptionShort>Wolf + Spider</descriptionShort>
-    <iconPath>Xenotypes/BS_Spider</iconPath>
+    <iconPath>UI/Icons/Xenotypes/BP_Arachna</iconPath>
     <inheritable>true</inheritable>
     <genes>
-      <li>BS_LargeFrame</li>
       <li>Moth_floof_HairClr</li>
-      <li>VU_Pounce</li>
+      <li MayRequire="RedMattis.BigSmall.Core">VU_Pounce</li>
       <li MayRequire="vanillaracesexpanded.lycanthrope">VRE_WarHowl</li>
       <li>MeleeDamage_Strong</li>
       <li>FireWeakness</li>
@@ -120,15 +120,15 @@
       <li>MaxTemp_SmallDecrease</li>
       <li>StrongStomach</li>
       <li>RobustDigestion</li>
-      <li>BS_Diet_Carnivore</li>
-      <li>BS_EverFertile</li>
+      <li MayRequire="RedMattis.BigSmall.Core">BS_Diet_Carnivore</li>
+      <li MayRequire="RedMattis.BigSmall.Core">BS_EverFertile</li>
       <li>Libido_High</li>
-      <li>BS_SpiderBody_Hair</li>
+      <li>DZ_SpiderBody_Wolf</li>
       <li>DZ_WolfEars</li>
       <li>Body_Standard</li>
       <li MayRequire="vanillaracesexpanded.insector">VRE_InsectFlesh</li>
       <li MayRequire="sarg.alphagenes">AG_InsectBlood</li>
-      <li>BS_FurryBody</li>
+      <li MayRequire="RedMattis.BigSmall.Core">BS_FurryBody</li>
       <li>DZ_AnimalNose</li>
       <li>AptitudeRemarkable_Melee</li>
       <li>AptitudePoor_Intellectual</li>
@@ -139,10 +139,10 @@
     <label>Tyrian Weaver</label>
     <description>A human spider hybrid that excels at crafting and produces their own high quality silk.</description>
     <descriptionShort>Silk producing spider</descriptionShort>
-    <iconPath>Xenotypes/BS_Spider</iconPath>
+    <iconPath>UI/Icons/Xenotypes/BP_Arachna</iconPath>
     <inheritable>true</inheritable>
     <genes>
-      <li>BS_NaturalArmor</li>
+      <li MayRequire="RedMattis.BigSmall.Core">BS_NaturalArmor</li>
       <li>FireWeakness</li>
       <li>FireTerror</li>
       <li>MeleeDamage_Weak</li>
@@ -166,7 +166,7 @@
     <label>Hemox</label>
     <description>A strange creature, created by Sanguophages to become a living hemogen transport, beyond that of a normal creature. (WIP)</description>
     <descriptionShort>Silk producing spider</descriptionShort>
-    <iconPath>Xenotypes/BS_Spider</iconPath>
+    <iconPath>UI/Icons/Xenotypes/BP_Arachna</iconPath>
     <inheritable>true</inheritable>
     <genes>
       <li>Ageless</li>
@@ -179,6 +179,9 @@
       <li>DZ_HemogenRegen</li>
       <li>Body_Standard</li>
       <li>Hair_BrightRed</li>
+      <li MayRequire="RedMattis.BigSmall.Core">BS_BloodHair</li>
+      <li MayRequire="RedMattis.BigSmall.Core">BS_TrulyAgeless</li>
+      <li MayRequire="RedMattis.BigSmall.Core">VU_NearSterile</li>
       <li MayRequire="sarg.alphagenes">AG_InsectBlood</li>
       <li MayRequire="vanillaracesexpanded.insector">VRE_InsectFlesh</li>
       <li>DZ_HemogenExpel</li>

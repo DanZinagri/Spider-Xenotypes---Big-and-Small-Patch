@@ -39,7 +39,7 @@
         <customEffectDescriptions>
             <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">Reduces the movement speed penalty when traversing difficult terrain</li>
         </customEffectDescriptions>
-        <iconPath>GeneIcons/BS_Spooder</iconPath>
+        <iconPath>UI/Icons/Genes/Gene_SpiderAb</iconPath>
         <displayOrderInCategory>777</displayOrderInCategory>
         <biostatCpx>1</biostatCpx>
         <biostatMet>-1</biostatMet>
@@ -54,7 +54,7 @@
         <biostatCpx>0</biostatCpx>
         <biostatMet>0</biostatMet>
         <randomChosen>false</randomChosen>
-        <iconPath>BS_Icons/Spider</iconPath>
+        <iconPath>UI/Icons/Genes/Gene_SpiderAb</iconPath>
         <exclusionTags>
             <li>Tail</li>
             <li>taur</li>
@@ -84,6 +84,95 @@
                 <thingDefSwap>BS_SpiderPersonRace</thingDefSwap>
             </li>
             <!-- <li Class="BigAndSmall.Flagger"><flags><ShowBaseAbdomen/></flags></li> -->
+        </modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="BS_BodySwitchNonExclusive">
+        <defName>DZ_SpiderBody_Wolf</defName>
+        <label>wolf spider body</label>
+        <description>Carriers of this gene have 8 legs, like a spider, and a larger-than-average frame.
+
+Spider body has hair-colour.</description>
+        <biostatCpx>2</biostatCpx>
+        <biostatMet>-2</biostatMet>
+        <statOffsets>
+            <SM_BodySizeOffset>0.4</SM_BodySizeOffset>
+        </statOffsets>
+        <randomChosen>false</randomChosen>
+        <iconPath>UI/Icons/Genes/Gene_SpiderAb</iconPath>
+        <exclusionTags>
+            <li>Tail</li>
+            <li>taur</li>
+            <li>spiderlegs</li>
+        </exclusionTags>
+        <renderNodeProperties>
+            <li>
+                <parentTagDef>Body</parentTagDef>
+                <texPath>Things/Pawn/Humanlike/BodyAttachments/SpiderAbdomen/Arachnidleg</texPath>
+                <drawSize>(1.25,1.25)</drawSize>
+                <colorType>Hair</colorType>
+                <drawData>
+                    <dataNorth>
+                        <offset>(0, 1.0, 0)</offset>
+                    </dataNorth>
+                    <dataSouth>
+                        <offset>(0, 2.0, 0)</offset>
+                    </dataSouth>
+                    <dataEast>
+                        <offset>(0, 0.19, 0)</offset>
+                    </dataEast>
+                </drawData>
+            </li>
+        </renderNodeProperties>
+        <modExtensions>
+            <li Class="BigAndSmall.PawnExtension">
+                <thingDefSwap>BS_SpiderPersonRace</thingDefSwap>
+            </li>
+            <!-- <li Class="BigAndSmall.Flagger"><flags><ShowBaseAbdomen/></flags></li> -->
+        </modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="BS_BodySwitchNonExclusive">
+        <defName>DZ_SpiderBody_Arakron</defName>
+        <label>brutish spider body</label>
+        <description>Carriers of this gene have 8 legs, like a spider, and a massive, heavily-built frame.
+
+Spider body has skin-colour.</description>
+        <biostatCpx>2</biostatCpx>
+        <biostatMet>-3</biostatMet>
+        <randomChosen>false</randomChosen>
+        <iconPath>UI/Icons/Genes/Gene_SpiderAb</iconPath>
+        <statOffsets>
+            <SM_BodySizeOffset>0.5</SM_BodySizeOffset>
+        </statOffsets>
+        <exclusionTags>
+            <li>Tail</li>
+            <li>taur</li>
+            <li>spiderlegs</li>
+        </exclusionTags>
+        <renderNodeProperties>
+            <li>
+                <parentTagDef>Body</parentTagDef>
+                <texPath>Things/Pawn/Humanlike/BodyAttachments/SpiderAbdomen/Arachnidleg</texPath>
+                <drawSize>(1.25,1.25)</drawSize>
+                <colorType>Skin</colorType>
+                <drawData>
+                    <dataNorth>
+                        <offset>(0, 1.0, 0)</offset>
+                    </dataNorth>
+                    <dataSouth>
+                        <offset>(0, 2.0, 0)</offset>
+                    </dataSouth>
+                    <dataEast>
+                        <offset>(0, 0.19, 0)</offset>
+                    </dataEast>
+                </drawData>
+            </li>
+        </renderNodeProperties>
+        <modExtensions>
+            <li Class="BigAndSmall.PawnExtension">
+                <thingDefSwap>BS_SpiderPersonRace</thingDefSwap>
+            </li>
         </modExtensions>
     </GeneDef>
 
