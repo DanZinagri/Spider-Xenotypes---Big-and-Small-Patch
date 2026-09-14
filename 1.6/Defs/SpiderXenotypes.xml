@@ -16,7 +16,6 @@
       <li>StrongStomach</li>
       <li>RobustDigestion</li>
       <li>WoundHealing_Fast</li>
-      <li MayRequire="RedMattis.BigSmall.Core">BS_NaturalArmor_Great</li>
       <li>PsychicAbility_Dull</li>
       <li>MoveSpeed_Slow</li>
       <li>ToxResist_Partial</li>
@@ -26,7 +25,6 @@
       <li>KillThirst</li>
       <li MayRequire="sarg.alphagenes">AG_VenomFangs</li>
       <li>DarkVision</li>
-      <li>Instability_Major</li>
       <li>AptitudeRemarkable_Melee</li>
       <li>AptitudePoor_Plants</li>
       <li>AptitudeStrong_Crafting</li>
